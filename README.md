@@ -9,4 +9,12 @@ Structural programming language for working with JSON.
 [Branch Save](https://goodmodslab-official.github.io) — Structured programming language for working with files json. 
 Create json files quickly, change data on the go. Branch Save does not impose a coding style on you, but on the contrary, you can write code the way you like.
 
+## Why exactly Branch Save
+With this programming language, you can quickly and on the go change data, collect information and read it.
+Built-in trigonometric and mathematical expressions, easy language grammar.
+forget about using large algorithms to write your parser json. Branch Save will do it for you!
+You can see for yourself what the programming language is capable of working with json.
+
+## Hello world and beyond 
+
 

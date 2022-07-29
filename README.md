@@ -22,4 +22,9 @@ FILE:test.txt;
 AUTHOR:GoodModsLab;
 text:Hello World!;
 ```
+The result will surprise you!
+![Output](https://github.com/GoodModsLab-Official/BranchSave/blob/004464836cbc4873f99cf6c62a06c4a2305280ce/%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA/Screenshot_20220729-174132~2.png)
+
+In order to start working in your project with our language, it is enough to install one source file, or install our editor.
+The source code is in the source file.
 

@@ -36,3 +36,8 @@ To get started with Branch Save, just install your favorite development
  * Project creation for Branch Save
  * Math expression test
  * Tutorials and demos
+
+## Partnership and cooperation
+You can help us develop and improve this programming language.
+You can ask questions in a special section, or you can change the language script for yourself and share it with us.
+We welcome everyone, the list of project participants will be posted below.

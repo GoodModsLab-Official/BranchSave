@@ -1,0 +1,9 @@
+FILE:test.txt;
+AUTHOR: GoodModsLab;
+DESCRIPTION: All grammars of the given language;
+
+KEY: VALUE;
+KEY: VALUE+-/*VALUE;
+KEY: (BLOCK)VALUE;
+
+KEY:KEY2;

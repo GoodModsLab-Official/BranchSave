@@ -33,7 +33,6 @@ To get started with Branch Save, just install your favorite development
   
   
  See our __[website](https://goodmodslab-official.github.io)__ for instructions on how to get started with this, or read our wiki: 
- 
- * Project creation for Branch Save
- * Simple mod 
- * Tutorials and demos
+ * Project creation for Branch Save
+ * Math expression test
+ * Tutorials and demos

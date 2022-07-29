@@ -1,0 +1,5 @@
+FILE:math.txt
+AUTHOR: GoodModsLab;
+DESCRIPTION: Mathematical expressions and their solution;
+
+a: sin30 + 70;

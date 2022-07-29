@@ -16,5 +16,10 @@ forget about using large algorithms to write your parser json. Branch Save will 
 You can see for yourself what the programming language is capable of working with json.
 
 ## Hello world and beyond 
-
+This is how you can output a welcome message to a file.
+```javascript
+FILE:test.txt;
+AUTHOR:GoodModsLab;
+text:Hello World!;
+```
 

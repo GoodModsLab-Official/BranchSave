@@ -1,0 +1,7 @@
+FILE:test.txt;
+AUTHOR: GoodModsLab;
+DESCRIPTION: A simple project to output some keys;
+
+Name: Edvard; LastName:(upcase)White; bank:500-40;
+balance:bank; id:(rand)9999999;
+

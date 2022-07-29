@@ -28,3 +28,12 @@ The result will surprise you!
 In order to start working in your project with our language, it is enough to install one source file, or install our editor.
 The source code is in the source file.
 
+## Getting Branch Save / Documentation
+To get started with Branch Save, just install your favorite development environment. However, for a start, we recommend using our editor, for familiarization. Our tools and development environment will help you create a project for Branch Save. 
+  
+  
+ See our __[website](https://goodmodslab-official.github.io)__ for instructions on how to get started with this, or read our wiki: 
+ 
+ * Project creation for Branch Save
+ * Simple mod 
+ * Tutorials and demos

@@ -1,0 +1,86 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/background_"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="8dp"
+		android:background="#00B38B"
+		android:orientation="vertical">
+		<TextView
+			android:id="@+id/text_title_app_"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:gravity="center_horizontal|center_vertical"
+			android:text="Branch Save 🌿"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			android:textColor="#FFFFFF"
+			android:layout_gravity="center_horizontal|center_vertical"
+			android:fontFamily="@font/font_goodmodslab" />
+		<EditText
+			android:id="@+id/code_area_"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="10dp"
+			android:paddingLeft="10dp"
+			android:paddingTop="8dp"
+			android:paddingRight="8dp"
+			android:paddingBottom="8dp"
+			android:background="#FFFFFF"
+			android:gravity="left|top"
+			android:textSize="12sp"
+			android:textColor="#00B38B"
+			android:hint="⟩⟩ Your Branch Save script"
+			android:textColorHint="#607D8B"
+			android:layout_gravity="center_horizontal|center_vertical"
+			android:layout_weight="1" />
+		<TextView
+			android:id="@+id/text_logger_"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:textSize="12sp"
+			android:textColor="#FFFFFF" />
+		<LinearLayout
+			android:id="@+id/box_compile_button_"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:background="#FFFFFF"
+			android:gravity="center_horizontal|center_vertical"
+			android:orientation="horizontal"
+			android:layout_gravity="center_horizontal|center_vertical">
+			<Button
+				android:id="@+id/btn_file_open_"
+				android:layout_width="wrap_content"
+				android:layout_height="30dp"
+				android:layout_marginRight="5dp"
+				android:background="#00B38B"
+				android:gravity="center_horizontal|center_vertical"
+				android:text="Open file .brch"
+				android:textSize="12sp"
+				android:textColor="#FFFFFF"
+				android:layout_gravity="center_horizontal|center_vertical"
+				android:layout_weight="1" />
+			<Button
+				android:id="@+id/btn_compiler_json_"
+				android:layout_width="wrap_content"
+				android:layout_height="30dp"
+				android:padding="3dp"
+				android:background="#00B38B"
+				android:gravity="center_horizontal|center_vertical"
+				android:text="Compile to json"
+				android:textSize="12sp"
+				android:textColor="#FFFFFF"
+				android:layout_gravity="center_horizontal|center_vertical"
+				android:layout_weight="3" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

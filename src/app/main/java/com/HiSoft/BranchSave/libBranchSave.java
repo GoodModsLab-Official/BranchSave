@@ -32,7 +32,7 @@ public class libBranchSave {
 			tokenList.addAll(Arrays.asList(code.split(";")));
 			for(int _repeat16 = 0; _repeat16 < (int)(tokenList.size()); _repeat16++) {
 				if (n > tokenList.size()) {
-					System.out.println("ERROR: ".concat(_lib_BranchSave_ErrorModule("parser")));
+					text_logger_.setText("ERROR: ".concat(_lib_BranchSave_ErrorModule("parser")));
 				}
 				else {
 					_lib_BranchSave_Parser(tokenList.get((int)(n)));
@@ -42,13 +42,13 @@ public class libBranchSave {
 				}
 			}
 			if (!mapJson.containsKey("FILE")) {
-				System.out.println("ERROR: ".concat(_lib_BranchSave_ErrorModule("file")));
+				FileUtil.writeFile(FileUtil.getExternalStorageDir().concat("/BranchSave/file.brch"), new Gson().toJson(mapJson));
 			}
 			else {
 				FileUtil.writeFile(FileUtil.getExternalStorageDir().concat(mapJson.get("FILE").toString()), new Gson().toJson(mapJson));
 			}
 		} catch(Exception e) {
-			System.out.println("ERROR: ".concat(String.valueOf(e).replace("java", "BranchSave")));
+			text_logger_.setText("ERROR: ".concat(String.valueOf(e).replace("java", "BranchSave")));
 		}
 	}
 	
@@ -67,16 +67,14 @@ public class libBranchSave {
 		}
 	}
 	
-
-
-
+	
 	public void _lib_BranchSave_Parser(final String _context) {
 		String Sourse_ = _context.trim();
 		String[] Sourse__ = Sourse_.split("\\:");
 		
 		keyBuffer = Sourse__[0].trim();
 		valueBuffer = Sourse__[1].trim();
-		if (!Sourse__[0].trim().equals("FILE")) {
+		if (!(Sourse__[0].trim().equals("FILE") || Sourse__[1].trim().contains("(read)"))) {
 			if (Sourse__[0].trim().contains("+") || (Sourse__[0].trim().contains("-") || (Sourse__[0].trim().contains("/") || Sourse__[0].trim().contains("*")))) {
 				keyBuffer = String.valueOf(_lib_BranchSave_Eval(Sourse__[0].trim()));
 			}
@@ -115,7 +113,7 @@ public class libBranchSave {
 			            double parse() {
 				                nextChar();
 				                double x = parseExpression();
-				                if (pos < _context.length()) throw new RuntimeException("Unexpected: " + (char)ch);
+				                if (pos < _context.length()) throw new RuntimeException("Unexpected: " + (char)ch + " line " + pos);
 				                return x;
 				            }
 			
@@ -187,7 +185,7 @@ public class libBranchSave {
 			valueBuffer = String.valueOf((long)(_context.replace("(len)", "").length()));
 		}
 		if (_context.contains("(read)")) {
-			valueBuffer = FileUtil.readFile(_context.replace("(read)", ""));
+			valueBuffer = FileUtil.readFile(FileUtil.getExternalStorageDir().concat(_context.replace("(read)", "")));
 		}
 		if (_context.contains("(rand)")) {
 			valueBuffer = String.valueOf(SketchwareUtil.getRandom((int)(0), (int)(Double.parseDouble(_context.replace("(rand)", "")))));
@@ -200,6 +198,9 @@ public class libBranchSave {
 		}
 		if (_context.contains("(upcase)")) {
 			valueBuffer = _context.replace("(upcase)", "").toUpperCase();
+		}
+		if (_context.contains("(trim)")) {
+			valueBuffer = _context.replace("(trim)", "").trim();
 		}
 	}
 	

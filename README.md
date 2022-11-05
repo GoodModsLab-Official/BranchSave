@@ -1,28 +1,33 @@
 ![BranchSave](https://github.com/GoodModsLab-Official/BranchSave/blob/8587a18b45acc9e02e7a1498bc53e5a78825b952/%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA/ic_title_logo.png)
-Structural programming language for working with JSON.
+Structural programming language.
 
-![Current version](https://img.shields.io/badge/BranchSave-v0.1.0-%2330BF84) ![Current version](https://img.shields.io/badge/Publish-29.07.2022-%2330BF84)
+![Current version](https://img.shields.io/badge/BranchSave-v1.0.0-%2330BF84) ![Current version](https://img.shields.io/badge/Publish-05.11.2022-%2330BF84)
 ![GitHub followers](https://img.shields.io/github/followers/GoodModsLab-Official?style=social) 
 ![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCWMQHUQ3-Of_pYqNvXZHqFQ?style=social)
 
 ## Programming language for working with json
-[Branch Save](https://goodmodslab-official.github.io) — Structured programming language for working with files json. 
-Create json files quickly, change data on the go. Branch Save does not impose a coding style on you, but on the contrary, you can write code the way you like.
+[Branch Save](https://goodmodslab-official.github.io) — Branch Save is a compiled programming language for developing your databases, created in java for the JVM. It uses a structured programming paradigm and has dynamic data typing.
+
+Compiled in Json, XML and even vice versa. Simple code on Branch Save is easy to learn. Use it where you definitely need data storage, as well as markup for interfaces to compile XML files later.
 
 ## Why exactly Branch Save
-With this programming language, you can quickly and on the go change data, collect information and read it.
-Built-in trigonometric and mathematical expressions, easy language grammar.
-forget about using large algorithms to write your parser json. Branch Save will do it for you!
-You can see for yourself what the programming language is capable of working with json.
+The advantage of our language is that you can forget about the incomprehensible syntax of Json or XML. 
+Branch Save is an easy syntax, for example, you can assign to a variable through a more convenient sign - ':' or through '='.
+Compile two languages from one language at once! 
+If you need to get Branch Save from Json and XML, this is also not a question, you can easily do it.
+
+It is also worth noting that you can always change the value of a variable. 
+For example, to get data from a single file and operate on them throughout the algorithm.
 
 ## Hello world and beyond 
 This is how you can output a welcome message to a file.
 ```javascript
-FILE:test.txt;
-AUTHOR:GoodModsLab;
-text:Hello World!;
+Table = My cool table;
+ValueTable: GoodModsLab;
+import = ($)Table;
 ```
 The result will surprise you!
+
 ![Output](https://github.com/GoodModsLab-Official/BranchSave/blob/004464836cbc4873f99cf6c62a06c4a2305280ce/%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA/Screenshot_20220729-174132~2.png)
 
 In order to start working in your project with our language, it is enough to install one source file, or install our editor.

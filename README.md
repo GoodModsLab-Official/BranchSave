@@ -27,15 +27,17 @@ ValueTable: GoodModsLab;
 import = ($)Table;
 ```
 The result will surprise you!
-
-![Output](https://github.com/GoodModsLab-Official/BranchSave/blob/004464836cbc4873f99cf6c62a06c4a2305280ce/%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA/Screenshot_20220729-174132~2.png)
-
+```javascript
+{"Table":"My cool table","ValueTable":"GoodModsLab","import":"My cool table"}
+```
 In order to start working in your project with our language, it is enough to install one source file, or install our editor.
 The source code is in the source file.
 
 ## Getting Branch Save / Documentation
 To get started with Branch Save, just install your favorite development environment. However, for a start, we recommend using our editor, for familiarization. Our tools and development environment will help you create a project for Branch Save. 
-  
+
+If you want to run the Branch Save code on the server, then install BranchSave.jar and write this command (Also make sure you have a Java server.) 
+`java -jar BranchSave.jar`
   
  See our __[website](https://goodmodslab-official.github.io)__ for instructions on how to get started with this, or read our wiki: 
  * Project creation for Branch Save

@@ -51,7 +51,28 @@ $nullInvisibleVar;
 ```
 
 ## Keywords and operators
+Keywords are the very keywords with which you can create an algorithm for working on data from memory cells (variables). 
+Here is the easiest way to use them (we are writing adding a key):
+```kotlin
+Test = 50;
+$add = Test2;
+$add = Test3;
 
+Test2 = ($)Test;
+$remove = Test3;
+```
+Operators are keywords in arguments (variable values). 
+Some make it easier to work by getting data from another file, some are used for counting. 
+And others get values from another memory location.
+
+```kotlin
+$comment = ($) - Import value from variable;
+Source = 5;
+Import = ($)Source;
+
+$comment = ($math) - Mathematic expressions
+MathVar = ($math) 50-6 + 7 / 2 + cos(30);
+```
 ## Getting Branch Save / Documentation
 To get started with Branch Save, just install your favorite development environment. However, for a start, we recommend using our editor, for familiarization. Our tools and development environment will help you create a project for Branch Save. 
 

@@ -21,7 +21,7 @@ For example, to get data from a single file and operate on them throughout the a
 
 ## Hello world and beyond 
 This is how you can output a welcome message to a file.
-```javascript
+```kotlin
 Table = My cool table;
 ValueTable: GoodModsLab;
 import = ($)Table;
@@ -32,6 +32,25 @@ The result will surprise you!
 ```
 In order to start working in your project with our language, it is enough to install one source file, or install our editor.
 The source code is in the source file.
+
+## Variables
+In our Branch Save programming language, each element of the code (Token) consists of a key and its value, even operators, these are peculiar variables. 
+Look at what they are
+```kotlin
+MyVar = value;
+MyVar2 : value2;
+
+$MyInvisibleVar = invisibleValue;
+$MyInvisibleVar2 : invisibleValue2;
+```
+
+If you do not want to set the value of a variable, leave it without assignment and it will be equal to `null`
+```kotlin
+nullVar;
+$nullInvisibleVar;
+```
+
+## Keywords and operators
 
 ## Getting Branch Save / Documentation
 To get started with Branch Save, just install your favorite development environment. However, for a start, we recommend using our editor, for familiarization. Our tools and development environment will help you create a project for Branch Save. 

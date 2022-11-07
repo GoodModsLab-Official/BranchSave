@@ -70,7 +70,7 @@ $comment = ($) - Import value from variable;
 Source = 5;
 Import = ($)Source;
 
-$comment = ($math) - Mathematic expressions
+$comment = ($math) - Mathematic expressions;
 MathVar = ($math) 50-6 + 7 / 2 + cos(30);
 ```
 ## Getting Branch Save / Documentation

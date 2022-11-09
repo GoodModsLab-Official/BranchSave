@@ -1,0 +1,3 @@
+Table = My cool table;
+ValueTable: GoodModsLab;
+import = ($)Table;

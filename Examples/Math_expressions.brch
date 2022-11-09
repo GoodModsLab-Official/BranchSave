@@ -1,7 +1,0 @@
-FILE:math.txt
-AUTHOR: GoodModsLab;
-DESCRIPTION: Mathematical expressions and their solution;
-
-a: sin30 + 70;
-b: cos45 + 40;
-c: 4+1-1*1/6^(5*3);

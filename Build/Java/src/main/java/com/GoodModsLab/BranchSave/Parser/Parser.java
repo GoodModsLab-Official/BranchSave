@@ -55,6 +55,9 @@ public final class Parser {
                     throw new ParserExceptions("Unknown memory location or variable on the key ", keyBuffer);
                 }
             }
+            if (keyBuffer.equals("$print")) {
+                System.out.println(tokenizeArgs(valueBuffer));
+            }
         } else {
             jsonCompile.put(keyBuffer, tokenizeArgs(valueBuffer));
 

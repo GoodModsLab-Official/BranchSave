@@ -1,3 +1,2 @@
-Table = My cool table;
-ValueTable: GoodModsLab;
-import = ($)Table;
+key:r;
+$print:($)key;

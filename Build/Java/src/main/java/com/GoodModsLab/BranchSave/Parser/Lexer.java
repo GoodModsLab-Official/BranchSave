@@ -22,7 +22,7 @@ public final class Lexer {
         this.context = context;
     }
 
-    public void tokenize() throws TokenizeExceptions {
+    public String tokenize() throws TokenizeExceptions {
         pos = 0;
         code = context.trim();
         isNextToken = true;
@@ -34,7 +34,7 @@ public final class Lexer {
                     pos++;
                 }
             }
-            new Compile(compile).toJson();
+            return new Compile(compile).toJson();
         } catch (Exception e) {
             throw new TokenizeExceptions(String.valueOf(e));
         }

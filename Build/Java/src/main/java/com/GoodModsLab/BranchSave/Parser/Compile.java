@@ -12,7 +12,7 @@ public final class Compile {
         this.jsonCompile = jsonCompile;
     }
 
-    public void toJson() {
-        System.out.println(new Gson().toJson(jsonCompile));
+    public String toJson() {
+        return new Gson().toJson(jsonCompile);
     }
 }

@@ -16,8 +16,8 @@ public final class Main {
 
     private static final int VERSION_MAJOR = 1;
     private static final int VERSION_MINOR = 0;
-    private static final int VERSION_PATCH = 3;
-    private static final String VERSION_NAME = "Json";
+    private static final int VERSION_PATCH = 4;
+    private static final String VERSION_NAME = "Parser";
     private static final String VERSION = VERSION_MAJOR + "." + VERSION_MINOR + "." + VERSION_PATCH + " " + VERSION_NAME;
 
     public static void main(String[] args) throws IOException, TokenizeExceptions {

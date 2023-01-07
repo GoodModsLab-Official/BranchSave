@@ -4,22 +4,22 @@ import com.GoodModsLab.BranchSave.Exceptions.TokenizeExceptions;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public final class Lexer {
     private double pos;
     private double pos1;
 
+    private int length;
     private String code;
+
     private boolean isNextToken;
     private final String context;
 
     private final ArrayList<String> tokenList = new ArrayList<>();
     public  final HashMap jsonCompile = new HashMap();
     private HashMap compile = new HashMap<>();
+
 
     public Lexer(String context) {
         this.context = context;

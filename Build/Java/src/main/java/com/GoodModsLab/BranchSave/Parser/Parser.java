@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import javax.xml.transform.Source;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public final class Parser {
 
@@ -13,6 +14,7 @@ public final class Parser {
     private String valueBuffer = "";
     private final String context;
     private final HashMap keywords = new HashMap();
+    private List<Token> tokens = new ArrayList<>();
     private HashMap jsonCompile;
 
     public Parser(String context, HashMap jsonCompile) {
@@ -74,94 +76,10 @@ public final class Parser {
             }
         }
         if (context.trim().contains("($math)")) {
-            return String.valueOf(eval(context.trim().replace("($math)", "")));
+            tokens = new ParserArgs(jsonCompile).parse(context.trim().replace("($math)", ""));
+            TokenBuffer tokenBuffer = new TokenBuffer(tokens);
+            return String.valueOf(new ParserArgs(jsonCompile).expression(tokenBuffer));
         }
         return context.trim();
-    }
-
-    private double eval(final String _context) {
-        return new Object() {
-            int pos = -1, ch;
-
-            void nextChar() {
-                ch = (++pos < _context.length()) ? _context.charAt(pos) : -1;
-            }
-
-            boolean eat(int charToEat) {
-                while (ch == ' ') nextChar();
-                if (ch == charToEat) {
-                    nextChar();
-                    return true;
-                }
-                return false;
-            }
-
-            double parse() {
-                nextChar();
-                double x = parseExpression();
-                if (pos < _context.length()) throw new RuntimeException("Unexpected: " + (char)ch + " line " + pos);
-                return x;
-            }
-
-            // Grammar:
-            // expression = term | expression `+` term | expression `-` term
-            // term = factor | term `*` factor | term `/` factor
-            // factor = `+` factor | `-` factor | `(` expression `)` | number
-            //        | functionName `(` expression `)` | functionName factor
-            //        | factor `^` factor
-
-            double parseExpression() {
-                double x = parseTerm();
-                for (;;) {
-                    if      (eat('+')) x += parseTerm(); // addition
-                    else if (eat('-')) x -= parseTerm(); // subtraction
-                    else return x;
-                }
-            }
-
-            double parseTerm() {
-                double x = parseFactor();
-                for (;;) {
-                    if      (eat('*')) x *= parseFactor(); // multiplication
-                    else if (eat('/')) x /= parseFactor(); // division
-                    else return x;
-                }
-            }
-
-            double parseFactor() {
-                if (eat('+')) return +parseFactor(); // unary plus
-                if (eat('-')) return -parseFactor(); // unary minus
-
-                double x;
-                int startPos = this.pos;
-                if (eat('(')) { // parentheses
-                    x = parseExpression();
-                    if (!eat(')')) throw new RuntimeException("Missing ')'");
-                } else if ((ch >= '0' && ch <= '9') || ch == '.') { // numbers
-                    while ((ch >= '0' && ch <= '9') || ch == '.') nextChar();
-                    x = Double.parseDouble(_context.substring(startPos, this.pos));
-                } else if (ch >= 'a' && ch <= 'z') { // functions
-                    while (ch >= 'a' && ch <= 'z') nextChar();
-                    String func = _context.substring(startPos, this.pos);
-                    if (eat('(')) {
-                        x = parseExpression();
-                        if (!eat(')')) throw new RuntimeException("Missing ')' after argument to " + func);
-                    } else {
-                        x = parseFactor();
-                    }
-                    if (func.equals("sqrt")) x = Math.sqrt(x);
-                    else if (func.equals("sin")) x = Math.sin(Math.toRadians(x));
-                    else if (func.equals("cos")) x = Math.cos(Math.toRadians(x));
-                    else if (func.equals("tan")) x = Math.tan(Math.toRadians(x));
-                    else throw new RuntimeException("Unknown function: " + func);
-                } else {
-                    throw new RuntimeException("Unexpected: " + (char)ch);
-                }
-
-                if (eat('^')) x = Math.pow(x, parseFactor()); // exponentiation
-
-                return x;
-            }
-        }.parse();
     }
 }

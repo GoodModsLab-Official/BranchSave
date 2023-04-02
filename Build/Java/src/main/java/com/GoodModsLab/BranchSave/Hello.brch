@@ -1,3 +1,36 @@
-MyTableName = My base;
-Myname = 5;
-Math = ($math) 1;
+$My project: Base;
+
+__table__ : DataBase;
+__description__ : Testing Data Base;
+
+$Import var: block
+
+import = ($) __table__;
+
+$Math: Block testing;
+
+num = 5;
+
+math = ($math) num + 5 * 5 - 6;
+round = ($round) 56.90;
+ceil = ($ceil) 456.93;
+floor = ($floor) 453.343;
+sin = ($sin) 30;
+cos = ($cos) 30;
+tan = ($tan) 60;
+asin = ($asin) 60;
+acos = ($acos) 60;
+atan = ($atan) 54;
+exp = ($exp) 45;
+log = ($log) 20;
+log10 = ($log10) 10;
+toRad = ($toRad) 45;
+toDeg = ($toDeg) 80;
+
+rand = ($rand) 0 TO 9;
+
+$Operators: blocks;
+len = ($len) floor;
+trim = ($trim)          value       ;
+toUpCase = ($toUpperCase) small_text;
+toLowCase = ($toLowerCase) CAPS;

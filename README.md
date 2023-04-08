@@ -80,7 +80,7 @@ If you want to run the Branch Save code on the server, then install BranchSave.j
 
 `java -jar BranchSave.jar`
   
- See our __[website](https://goodmodslab-official.github.io)__ for instructions on how to get started with this, or read our __[wiki](https://goodmodslab-organization.gitbook.io/branch-save-v.1.0.2/): 
+ See our __[website](https://goodmodslab-official.github.io)__ for instructions on how to get started with this, or read our [wiki](https://goodmodslab-organization.gitbook.io/branch-save-v.1.0.2/): 
  * Project creation for Branch Save
  * Math expression test
  * Tutorials and demos

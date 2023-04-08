@@ -1,7 +1,7 @@
 ![BranchSave](Branch_Save_/20221014_181806.jpg)
 Structural programming language.
 
-![Current version](https://img.shields.io/badge/BranchSave-v1.0.0-%2330BF84) ![Current version](https://img.shields.io/badge/Publish-05.11.2022-%2330BF84)
+![Current version](https://img.shields.io/badge/BranchSave-v1.0.5-%2330BF84) ![Current version](https://img.shields.io/badge/Publish-08.04.2023-%2330BF84)
 ![GitHub followers](https://img.shields.io/github/followers/GoodModsLab-Official?style=social) 
 ![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCWMQHUQ3-Of_pYqNvXZHqFQ?style=social)
 
@@ -80,7 +80,7 @@ If you want to run the Branch Save code on the server, then install BranchSave.j
 
 `java -jar BranchSave.jar`
   
- See our __[website](https://goodmodslab-official.github.io)__ for instructions on how to get started with this, or read our wiki: 
+ See our __[website](https://goodmodslab-official.github.io)__ for instructions on how to get started with this, or read our __[wiki](https://goodmodslab-organization.gitbook.io/branch-save-v.1.0.2/): 
  * Project creation for Branch Save
  * Math expression test
  * Tutorials and demos
